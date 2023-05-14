@@ -20,7 +20,7 @@ namespace Pharmacy
             {
                 foreach(Product product in products)
                 {
-
+                    if (product.Name)
                 }
             }
         }
