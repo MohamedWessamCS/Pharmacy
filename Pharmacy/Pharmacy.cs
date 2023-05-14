@@ -95,7 +95,7 @@ namespace Pharmacy
         }
         public void AddProductLocal()
         {
-            throw new NotImplementedException(); 
+            throw new NotImplementedException();
         }
         public void AddProductImported()
         {
