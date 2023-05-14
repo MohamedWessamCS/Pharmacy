@@ -30,7 +30,6 @@ namespace Pharmacy
             this.doctor = doctor;
             this.products = products;
         }
-
         public void PrintReceipt()
         {
             Console.WriteLine("User name: {0}", user.Name);
