@@ -30,6 +30,7 @@ namespace Pharmacy
             this.user = user;
             this.doctor = doctor;
             this.products = products;
+            id = ++lastId;
         }
         public void PrintReceipt()
         {

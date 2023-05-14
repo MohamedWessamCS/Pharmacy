@@ -14,7 +14,7 @@ namespace Pharmacy
             Name = name;
         }
         public abstract void Introduce();
-        public abstract void Operation();
+        public abstract void Operation(ref Pharmacy pharmacy);
     }
     public  class User : Human
     {
@@ -33,9 +33,9 @@ namespace Pharmacy
             Console.WriteLine($"Hello, I am {Name} and my username is {Username}.");
         }
 
-        public override void Operation()
+        public override void Operation(ref Pharmacy pharmacy)
         {
-
+            
         }
     }
     public class Doctor : Human
@@ -55,7 +55,7 @@ namespace Pharmacy
         {
             Console.WriteLine($"Hello, I am Dr. {Name} and I specialize in {Specialty}.");
         }
-        public override void Operation()
+        public override void Operation(ref Pharmacy pharmacy)
         {
 
         }

@@ -10,7 +10,8 @@ namespace Pharmacy
     {
         static void Main(string[] args)
         {
-
+            Pharmacy pharmacy = new Pharmacy(100);
+            
         }
     }
 }

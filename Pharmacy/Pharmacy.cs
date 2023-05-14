@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pharmacy
 {
-    internal class Pharmacy
+    public class Pharmacy
     {
         Product[] products;
         static int count = 0;
@@ -114,6 +114,13 @@ namespace Pharmacy
             products[count].PurchasePrice = purchasePrice;
             count++;
             Console.WriteLine("Product added successfully");
+        }
+        public void PrintProducts()
+        {
+            for(int i = 0; i < products.Length; i++)
+            {
+                Console.WriteLine($"{products[i].Name} Available: {products[i].Quantity}");
+            }
         }
     }
 }
