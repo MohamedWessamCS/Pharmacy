@@ -18,7 +18,10 @@ namespace Pharmacy
         {
             set
             {
-                foreach(Product product in)
+                foreach(Product product in products)
+                {
+
+                }
             }
         }
     }
