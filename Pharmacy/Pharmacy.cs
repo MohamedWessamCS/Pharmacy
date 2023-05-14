@@ -95,11 +95,11 @@ namespace Pharmacy
         }
         public void AddProductLocal()
         {
-            throw new NotImplementedException(); 
+             
         }
         public void AddProductImported()
         {
-            throw new NotImplementedException();
+            
         }
         private void AddProduct(string name, int quantity, string description, float sellPrice, float purchasePrice)
         {

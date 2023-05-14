@@ -15,7 +15,6 @@ namespace Pharmacy
         }
         public abstract void Introduce();
         public abstract void Operation();
-
     }
     public class User : Human
     {
