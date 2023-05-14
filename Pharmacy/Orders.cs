@@ -9,6 +9,7 @@ namespace Pharmacy
     internal class Orders
     {
         // User, Doctor, ID, Products and Price, Total Price
+
         // User name:
         // Doctor name:
         // Receipt ID:
