@@ -46,7 +46,7 @@ namespace Pharmacy
         }
         public override float ReturnTotalCost()
         {
-            return PurchasePrice * 0.05f;
+            return PurchasePrice - PurchasePrice * 0.05f;
         }
     }
     class Imported_Medication : Product
@@ -57,7 +57,7 @@ namespace Pharmacy
         }
         public override float ReturnTotalCost()
         {
-            return PurchasePrice * 0.25f;
+            return PurchasePrice - PurchasePrice * 0.25f;
         }
     }
 }
