@@ -86,8 +86,30 @@ namespace Pharmacy
                 products[index].Description = description;
                 products[index].SellPrice = sellPrice;
                 products[index].PurchasePrice = purchasePrice;
-
+                Console.WriteLine("Product has been edited.");
             }
+            else
+            {
+                Console.WriteLine("Error, product not found");
+            }
+        }
+        public void AddProductLocal()
+        {
+            throw new NotImplementedException(); 
+        }
+        public void AddProductImported()
+        {
+            throw new NotImplementedException();
+        }
+        private void AddProduct(string name, int quantity, string description, float sellPrice, float purchasePrice)
+        {
+            products[count].Name = name;
+            products[count].Quantity = quantity;
+            products[count].Description = description;
+            products[count].SellPrice = sellPrice;
+            products[count].PurchasePrice = purchasePrice;
+            count++;
+            Console.WriteLine("Product added successfully");
         }
     }
 }
