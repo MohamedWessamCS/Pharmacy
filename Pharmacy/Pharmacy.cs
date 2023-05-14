@@ -18,12 +18,43 @@ namespace Pharmacy
         {
             set
             {
-                foreach(Product product in products)
+                foreach (Product product in products)
                 {
-                    if (product.Name)
-                        Console.WriteLine("HaHa");
+                    if (product.Name == value.Name)
+                    {
+                        if (index >= count)
+                        {
+                            products[index].Quantity++;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Failed!"); ;
+                        }
+                    }
+                    else
+                    {
+                        products[index] = value;
+                        count++;
+                    }
+                }
+            }
+            get
+            {
+                if (index < count)
+                {
+                    return products[index];
+                }
+                else
+                {
+                    return null;
                 }
             }
         }
+        public bool CheckExistence(Product product)
+        {
+            bool flag = false;
+            for(int i = 0; i < products.Length; i++) { }
+        }
+        pub
     }
 }
