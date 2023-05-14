@@ -10,8 +10,7 @@ namespace Pharmacy
     {
         static void Main(string[] args)
         {
-            Pharmacy ph = new Pharmacy(100);
-            ph.AddProductLocal();
+
         }
     }
 }
