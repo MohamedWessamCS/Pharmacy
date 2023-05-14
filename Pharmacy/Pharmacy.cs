@@ -52,9 +52,42 @@ namespace Pharmacy
         }
         public bool CheckExistence(Product product)
         {
-            bool flag = false;
-            for(int i = 0; i < products.Length; i++) { }
+            for(int i = 0; i < products.Length; i++)
+            {
+                if (products[i].Name == product.Name)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
-        pub
+        public bool CheckExistence(string name, out Product prod, out int index)
+        {
+            for(int i = 0; i < products.Length; i++)
+            {
+                if (products[i].Name == name)
+                {
+                    prod = products[i];
+                    index = i;
+                    return true;
+                }
+            }
+            prod = null;
+            index = -1;
+            return false;
+        }
+        public void UpdateProduct(string name, int quantity, string description, float sellPrice, float purchasePrice)
+        {
+            Product prod;
+            int index;
+            if(CheckExistence(name, out prod, out index))
+            {
+                products[index].Quantity = quantity;
+                products[index].Description = description;
+                products[index].SellPrice = sellPrice;
+                products[index].PurchasePrice = purchasePrice;
+
+            }
+        }
     }
 }
