@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pharmacy
 {
-    internal abstract class Human
+    public abstract class Human
     {
         public string Name { get; set; }
         public Human(string name)
@@ -20,7 +20,6 @@ namespace Pharmacy
     {
         // A property for the username of the user
         public string Username { get; set; }
-
         // A constructor that takes a name and a username as parameters
         public User(string name, string username) : base(name)
         {
