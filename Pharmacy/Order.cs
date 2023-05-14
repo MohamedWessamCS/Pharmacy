@@ -8,5 +8,6 @@ namespace Pharmacy
 {
     internal class Order
     {
+
     }
 }
