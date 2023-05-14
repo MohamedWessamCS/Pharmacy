@@ -16,7 +16,7 @@ namespace Pharmacy
         public abstract void Introduce();
         public abstract void Operation();
     }
-    public class User : Human
+    public  class User : Human
     {
         // A property for the username of the user
         public string Username { get; set; }
@@ -24,6 +24,7 @@ namespace Pharmacy
         // A constructor that takes a name and a username as parameters
         public User(string name, string username) : base(name)
         {
+            Name = name;
             Username = username;
         }
 
@@ -40,9 +41,20 @@ namespace Pharmacy
     }
     public class Doctor : Human
     {
+        
+        public string Specialty { get; set; }
+
+        
+        public Doctor(string name, string specialty) : base(name)
+        {
+            Name = name;
+            Specialty = specialty;
+        }
+
+        
         public override void Introduce()
         {
-
+            Console.WriteLine($"Hello, I am Dr. {Name} and I specialize in {Specialty}.");
         }
         public override void Operation()
         {
