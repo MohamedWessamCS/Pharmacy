@@ -31,10 +31,10 @@ namespace Pharmacy
                 switch (type)
                 {
                     case "Local":
-                        products[count++] = new Local_Medication(productName, quantity, description, sellPrice, purchasePrice);
+                        AddProductLocal(productName, quantity, description, sellPrice, purchasePrice);
                         break;
                     case "Imported":
-                        products[count++] = new Imported_Medication(productName, quantity, description, sellPrice, purchasePrice);
+                        AddProductImported(productName, quantity, description, sellPrice, purchasePrice);
                         break;
                 }
                 Console.WriteLine("Press 1 to add more products ");
@@ -129,24 +129,14 @@ namespace Pharmacy
                 Console.WriteLine("Error, product not found");
             }
         }
-        public void AddProductLocal()
+        public void AddProductLocal(string name, int quantity, string description, float sellPrice, float purchasePrice)
         {
-            throw new NotImplementedException();
+            products[count] = new Local_Medication(name, quantity, description, sellPrice, purchasePrice);
+        }
+        public void AddProductImported(string name, int quantity, string description, float sellPrice, float purchasePrice)
+        {
+            products[count] = new Imported_Medication(name, quantity, description, sellPrice, purchasePrice);
 
-        }
-        public void AddProductImported()
-        {
-            
-        }
-        private void AddProduct(string name, int quantity, string description, float sellPrice, float purchasePrice)
-        {
-            products[count].Name = name;
-            products[count].Quantity = quantity;
-            products[count].Description = description;
-            products[count].SellPrice = sellPrice;
-            products[count].PurchasePrice = purchasePrice;
-            count++;
-            Console.WriteLine("Product added successfully");
         }
         public void PrintProducts()
         {

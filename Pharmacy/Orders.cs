@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pharmacy
 {
-    internal class Orders
+    public class Orders
     {
         // User, ID, Products and Price, Total Price
 
