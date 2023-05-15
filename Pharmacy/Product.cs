@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pharmacy
 {
-    internal abstract class Product
+    public abstract class Product
     {
         private string name;
         private int quantity;

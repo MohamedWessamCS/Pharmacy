@@ -119,5 +119,15 @@ namespace Pharmacy
                 Console.WriteLine($"{products[i].Name} Available: {products[i].Quantity}");
             }
         }
+        public void RemoveProduct(ref Product product)
+        {
+            foreach(Product p in products)
+            {
+                if (product.Name == p.Name)
+                {
+                    p.Quantity--;
+                }
+            }
+        }
     }
 }

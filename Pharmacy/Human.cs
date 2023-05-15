@@ -47,6 +47,7 @@ namespace Pharmacy
                 int index = 0;
                 pharmacy.CheckExistence(productName, out prod, out index);
                 order.AddItemToOrder(ref prod);
+                pharmacy.RemoveProduct(ref prod);
                 Console.WriteLine("Press 1 if you would like to purchase another item");
                 int choice = int.Parse(Console.ReadLine());
                 if(choice == 1)
@@ -55,33 +56,12 @@ namespace Pharmacy
                 }
                 else
                 {
-                    flag = false
+                    flag = false;
                 }
             }
             while (flag);
-
-        }
-    }
-    public class Doctor : Human
-    {
-        
-        public string Specialty { get; set; }
-
-        
-        public Doctor(string name, string specialty) : base(name)
-        {
-            Name = name;
-            Specialty = specialty;
-        }
-
-        
-        public override void Introduce()
-        {
-            Console.WriteLine($"Hello, I am Dr. {Name} and I specialize in {Specialty}.");
-        }
-        public override void Operation(ref Pharmacy pharmacy)
-        {
-
+            order.PrintReceipt();
+            Console.WriteLine("Thank you for purchasing at our pharmacy!");
         }
     }
 }
