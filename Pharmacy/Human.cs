@@ -35,7 +35,31 @@ namespace Pharmacy
 
         public override void Operation(ref Pharmacy pharmacy)
         {
-            
+            Orders order = new Orders(this);
+            bool flag = false;
+            pharmacy.PrintProducts();
+            do
+            {
+                Console.Write("Choose Product to Purchase: ");
+                string productName = Console.ReadLine();
+                Console.Write("\n");
+                Product prod;
+                int index = 0;
+                pharmacy.CheckExistence(productName, out prod, out index);
+                order.AddItemToOrder(ref prod);
+                Console.WriteLine("Press 1 if you would like to purchase another item");
+                int choice = int.Parse(Console.ReadLine());
+                if(choice == 1)
+                {
+                    flag = true;
+                }
+                else
+                {
+                    flag = false
+                }
+            }
+            while (flag);
+
         }
     }
     public class Doctor : Human
