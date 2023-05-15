@@ -28,12 +28,12 @@ namespace Pharmacy
                 float purchasePrice = float.Parse(Console.ReadLine());
                 Console.WriteLine("Local or Imported medication? ");
                 string type = Console.ReadLine();
-                switch (type)
+                switch (type.ToLower())
                 {
-                    case "Local":
+                    case "local":
                         AddProductLocal(productName, quantity, description, sellPrice, purchasePrice);
                         break;
-                    case "Imported":
+                    case "imported":
                         AddProductImported(productName, quantity, description, sellPrice, purchasePrice);
                         break;
                 }
@@ -64,7 +64,7 @@ namespace Pharmacy
                         }
                         else
                         {
-                            Console.WriteLine("Failed!"); ;
+                            Console.WriteLine("Failed!");
                         }
                     }
                     else
@@ -140,18 +140,18 @@ namespace Pharmacy
         }
         public void PrintProducts()
         {
-            for(int i = 0; i < products.Length; i++)
+            for(int i = 0; products[i] != null; i++)
             {
                 Console.WriteLine($"{products[i].Name} Available: {products[i].Quantity}");
             }
         }
         public void RemoveProduct(ref Product product)
         {
-            foreach(Product p in products)
+            for (int i = 0; products[i] != null; i++)
             {
-                if (product.Name == p.Name)
+                if (product.Name == products[i].Name)
                 {
-                    p.Quantity--;
+                    products[i].Quantity--;
                 }
             }
         }

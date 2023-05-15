@@ -11,7 +11,12 @@ namespace Pharmacy
         static void Main(string[] args)
         {
             Pharmacy pharmacy = new Pharmacy(100);
-            
+            Console.WriteLine("Hello! Please enter your name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("\nAnd your username please: ");
+            string username = Console.ReadLine();
+            User user = new User(name, username);
+            user.Operation(ref pharmacy);
         }
     }
 }

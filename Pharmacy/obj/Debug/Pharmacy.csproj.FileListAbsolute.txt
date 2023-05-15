@@ -1,0 +1,8 @@
+D:\SwE\C#\Pharmacy\Pharmacy\bin\Debug\Pharmacy.exe.config
+D:\SwE\C#\Pharmacy\Pharmacy\bin\Debug\Pharmacy.exe
+D:\SwE\C#\Pharmacy\Pharmacy\bin\Debug\Pharmacy.pdb
+D:\SwE\C#\Pharmacy\Pharmacy\obj\Debug\Pharmacy.csproj.AssemblyReference.cache
+D:\SwE\C#\Pharmacy\Pharmacy\obj\Debug\Pharmacy.csproj.SuggestedBindingRedirects.cache
+D:\SwE\C#\Pharmacy\Pharmacy\obj\Debug\Pharmacy.csproj.CoreCompileInputs.cache
+D:\SwE\C#\Pharmacy\Pharmacy\obj\Debug\Pharmacy.exe
+D:\SwE\C#\Pharmacy\Pharmacy\obj\Debug\Pharmacy.pdb
