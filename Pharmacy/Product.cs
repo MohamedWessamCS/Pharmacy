@@ -21,12 +21,10 @@ namespace Pharmacy
             this.sellPrice = sellPrice;
             this.purchasePrice = purchasePrice;
         }
-        public int Name { get; set; }
-        public int Quantity { get; set; }
-        public int Description { get; set; }
-        public int SellPrice { get; set; }
-        
-
+        public string Name { get { return name; } set { name = value; } }
+        public int Quantity { get { return quantity; } set { quantity = value; } }
+        public string Description { get { return description; } set { description = value; } }
+        public float SellPrice { get { return sellPrice; } set { sellPrice = value; } }
         public float PurchasePrice
         {
             set
