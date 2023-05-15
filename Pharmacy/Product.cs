@@ -44,7 +44,7 @@ namespace Pharmacy
     }
     class Local_Medication : Product
     {
-        public Local_Medication(string name, int quantity, string description, int sellPrice, int purchasePrice) : base(name, quantity, description, sellPrice, purchasePrice)
+        public Local_Medication(string name, int quantity, string description, float sellPrice, float purchasePrice) : base(name, quantity, description, sellPrice, purchasePrice)
         {
 
         }
@@ -55,7 +55,7 @@ namespace Pharmacy
     }
     class Imported_Medication : Product
     {
-        public Imported_Medication(string name, int quantity, string description, int sellPrice, int purchasePrice) : base(name, quantity, description, sellPrice, purchasePrice)
+        public Imported_Medication(string name, int quantity, string description, float sellPrice, float purchasePrice) : base(name, quantity, description, sellPrice, purchasePrice)
         {
 
         }

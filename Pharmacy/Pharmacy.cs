@@ -12,7 +12,43 @@ namespace Pharmacy
         static int count = 0;
         public Pharmacy(int size)
         {
+            bool flag = false;
             products = new Product[size];
+            do
+            {
+                Console.Write("Enter Product Name: ");
+                string productName = Console.ReadLine();
+                Console.Write("\nEnter Product Quantity: ");
+                int quantity = int.Parse(Console.ReadLine());
+                Console.Write("\nEnter Product Description: ");
+                string description = Console.ReadLine();
+                Console.Write("\nEnter Sell Price: ");
+                float sellPrice = float.Parse(Console.ReadLine());
+                Console.Write("\nEnter Purchase Price: ");
+                float purchasePrice = float.Parse(Console.ReadLine());
+                Console.WriteLine("Local or Imported medication? ");
+                string type = Console.ReadLine();
+                switch (type)
+                {
+                    case "Local":
+                        products[count++] = new Local_Medication(productName, quantity, description, sellPrice, purchasePrice);
+                        break;
+                    case "Imported":
+                        products[count++] = new Imported_Medication(productName, quantity, description, sellPrice, purchasePrice);
+                        break;
+                }
+                Console.WriteLine("Press 1 to add more products ");
+                int check = int.Parse(Console.ReadLine());
+                if (check == 1)
+                {
+                    flag = true;
+                }
+                else
+                {
+                    flag = false;
+                }
+            }
+            while (flag);
         }
         public Product this[int index]
         {
